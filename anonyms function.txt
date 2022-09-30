@@ -1,0 +1,127 @@
+1.print the odd number using function.
+//input example 1 2 3 4 5 6...
+var a=userInput[0].split(" ");
+ var s=function(a){
+     var temp="";
+     for(var i=0;i<parseInt(a.length);i++){
+         if(a[i]%2==1){
+             temp+=a[i]+" "
+         }
+        
+     }
+    return temp.trim();
+ }
+ console.log(s(a));
+
+2.sum of all numbers in given array.
+var a=userInput[0].split(" ");
+ var s=function(a){
+     var temp=0;
+     for(var i=0;i<parseInt(a.length);i++){
+        
+             temp+=parseInt(a[i])
+
+        
+     }
+     return temp;
+ }
+ console.log(s(a));
+
+3.prime numbers in an given array.
+var a=userInput[0].split(" ");
+var s=function(a){
+       var temp=[];
+        for(var i=0;i<=parseInt(a.length);i++){
+            for(var j=2;j<a[i];j++){
+                if(a[i]%j==0)
+                break;
+            }
+            if(a[i]==j){
+                temp.push(a[i]);
+            }
+        }
+        return temp.join(" ");
+    }
+ console.log(s(a));
+
+4.print the median of an given two sorted array the array valaue is same 
+var a=userInput[0].split(" ");
+var b=userInput[1].split(" ");
+var s=function(a,b){
+      var g;
+     var temp;
+        var z=a.sort((d,s)=>d-s);
+        var y=b.sort((d,s)=>d-s);
+      var l=[...z,...y];
+          g=l.sort((d,s)=>d-s)
+          var h=parseInt(g.length);
+      var c=parseInt(l.length/2);
+       var e=(parseInt(g[c])+parseInt(g[c-1]))/2;
+       temp=e;
+       return temp;
+    }
+ console.log(s(a,b))
+
+5.Remove the duplicate of an given array.
+var a=userInput[0].split(" ");
+var b=userInput[1].split(" ");
+var s=function(a,b){
+      var g;
+     var temp;
+        var z=a.sort((d,s)=>d-s);
+        var y=b.sort((d,s)=>d-s);
+      var l=[...z,...y];
+          g=l.sort((d,s)=>d-s)
+          var h=parseInt(g.length);
+      var c=parseInt(l.length/2);
+       var e=(parseInt(g[c])+parseInt(g[c-1]))/2;
+       temp=e;
+       return temp;
+    }
+ console.log(s(a,b));
+
+6..Rotate the given array n times
+var a=userInput[0];
+var arr=userInput[1].split(" ");
+var s=function(arr,a){
+    for(let i=0;i<a;i++){
+         let temp=arr[0];
+         for(let j=0;j<arr.length;j++){
+             arr[j]=arr[j+1];
+         }
+         arr[arr.length-1]=temp;
+     }
+     return arr;
+ }
+ console.log(s(arr,a))
+
+7.Convert all the strings to title caps in a string array
+var str=userInput[0].split(" ");
+ var s=function(str){
+    var temp=[];
+     for( var j=0;j<parseInt(str.length);j++){
+          temp.push(str[j].charAt(0).toUpperCase()+str[j].slice(1));
+               }
+        return temp;
+    }
+ console.log(s(str));
+
+8..print the palindrom in given array.
+  
+   var a=userInput[0].split(" ");
+var palindrom= function(a){
+ var t=""
+  var b=a.map((ele)=>ele); var temp=[];
+  var charSt;var rever; var result;
+  for(var i=0;i<parseInt(a.length);i++){
+     charSt=b[i].split("");
+     rever=charSt.reverse();
+     result=rever.join("");
+     temp.push(result);
+     if(a[i]==temp[i]){
+         t=t+a[i]+" ";
+     }
+  }
+  return t;
+}
+  console.log(palindrom(a));

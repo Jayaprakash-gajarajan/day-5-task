@@ -1,0 +1,81 @@
+Using arrow function in javaScript.
+
+a.Print odd numbers in an array.
+var a=userInput[0].split(" ");
+var s=(a)=>{
+     var temp="";
+     for(var i=0;i<parseInt(a.length);i++){
+         if(a[i]%2==1){
+             temp+=a[i]+" "
+         }
+        }
+      return temp;
+  }
+     console.log(s(a));
+
+b.Convert all the strings to title caps in a string array
+ 
+var str=userInput[0].split(" ");
+  var s=(str)=>{
+    var temp=[];
+     for( var j=0;j<parseInt(str.length);j++){
+          temp.push(str[j].charAt(0).toUpperCase()+str[j].slice(1));
+               }
+               return temp.join(" ");
+    }
+      console.log(s(str));
+
+
+c.Sum of all numbers in an array
+var a=userInput[0].split(" ");
+var s=(a)=>{
+     var temp=0;
+     for(var i=0;i<parseInt(a.length);i++){
+        
+             temp+=parseInt(a[i])
+
+        
+     }
+     return temp;
+ }
+     console.log(s(a));
+
+d.Return all the prime numbers in an array
+var a=userInput[0].split(" ");
+var s=(a)=>{
+       var temp=[];
+        for(var i=0;i<=parseInt(a.length);i++){
+            for(var j=2;j<a[i];j++){
+                if(a[i]%j==0)
+                break;
+            }
+            if(a[i]==j){
+                temp.push(a[i]);
+            }
+        }
+        return temp;
+  }
+        console.log(s(a));
+
+e.Return all the palindrom in an given array.
+
+//input example var a=["mom","sister"];
+ var a=userInput[0].split(" ");
+var palindrom=(a)=>{
+ var t=""
+  var b=a.map((ele)=>ele); var temp=[];
+  var charSt;var rever; var result;
+  for(var i=0;i<parseInt(a.length);i++){
+     charSt=b[i].split("");
+     rever=charSt.reverse();
+     result=rever.join("");
+     temp.push(result);
+     if(a[i]==temp[i]){
+         t=t+a[i]+" ";
+     }
+  }
+  return t;
+}
+  console.log(palindrom(a));
+
+
